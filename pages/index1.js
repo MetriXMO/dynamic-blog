@@ -1,9 +1,9 @@
-import HanDout from '../components/Cards';
+import Cards from '../components/Cards';
 
-const Hand = () => {
+const Card = () => {
   return (
-    <HanDout/> 
+    <Cards/> 
   );
 }
 
-export default Hand;
+export default Card;
