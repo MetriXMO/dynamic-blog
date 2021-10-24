@@ -1,23 +1,9 @@
-import { allArticles } from '../../lib/blog';
-import Layout from '../../components/Layout';
-import Cards from '../../components/Cards';
-import SubHeader from '../../components/SubHeader';
+import HomePage from '../components/Home';
 
-export default function Blogs({ data }) {
+const Home = () => {
   return (
-    <Layout>
-      <SubHeader title={'Articles'} description={'List of articles.'} />
-      <Cards cards={data} loggedIn={false} />
-    </Layout>
-  )
+    <HomePage /> 
+  );
 }
 
-export async function getServerSideProps() {
-  const data = await allArticles();
-
-  return {
-    props: {
-      data: JSON.parse(JSON.stringify(data))
-    }
-  }
-}
+export default Home;
