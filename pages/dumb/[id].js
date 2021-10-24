@@ -48,7 +48,7 @@ export default function Main({ data }) {
             <Grid item xs={12}>
                 <div className={classes.header}>
                     <Typography variant="h3" gutterBottom align="center">
-                        {data.title}
+                      We are humans
                         <Divider />
                     </Typography>
 
@@ -57,14 +57,14 @@ export default function Main({ data }) {
                     <Typography variant="h6" gutterBottom>
                         <Divider />
                         <br />
-                        {data.description}
+                       HAU SO PRO???
                     </Typography>
                 </div>
 
                 <Divider />
                 <Container maxWidth="md">
                     <article>
-                        <Markdown>{data.body}</Markdown>
+                        <Markdown>Idk</Markdown>
                     </article>
                 </Container>
             </Grid>
