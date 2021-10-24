@@ -1,9 +1,22 @@
-import Card from '../components/Cards';
+import { allArticles } from '../../lib/blog';
+import Layout from '../../components/Layout';
+import Cards from '../../components/Cards';
+import SubHeader from '../../components/SubHeader';
 
-const Cards = () => {
+export default function Blogs({ data }) {
   return (
-    <Card/> 
-  );
+    <Layout>
+      <SubHeader title={'Articles'} description={'List of articles.'} />
+      <Cards cards={data} loggedIn={false} />
+    </Layout>
+  )
 }
 
-export default Cards;
+export async function getServerSideProps() {
+  const data = await allArticles();
+
+  return {
+    props: {
+      data: JSON.parse(JSON.stringify(data))
+    }
+  }
