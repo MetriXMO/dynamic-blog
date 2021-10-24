@@ -20,3 +20,4 @@ export async function getServerSideProps() {
       data: JSON.parse(JSON.stringify(data))
     }
   }
+}
