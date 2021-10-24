@@ -1,9 +1,9 @@
-import Cards from '../components/Cards';
+import Card from '../components/Cards';
 
-const Card = () => {
+const Cards = () => {
   return (
-    <Cards/> 
+    <Card/> 
   );
 }
 
-export default Card;
+export default Cards;
